@@ -1,0 +1,132 @@
+# RFD3 input for the 9I27 CABP/Mg site transplant (form II Rubisco, R. rubrum).
+# 7 unindexed components, 19 fixed residues, all 29 contacting atoms carried over.
+# Run: rfd3 design out_dir=<path> inputs=inputs.yaml
+#
+# GATE THIS FIRST - do not spend a 7-component run on an unanswered question.
+# Test run A (1 component):  unindex: ["A191"]  with the A191 atom list below,
+#   cleanup_guideposts: False. Then grep the log for a non-standard-residue warning
+#   or a remap, and check the guidepost output for the literal atoms CX, OQ1, OQ2.
+#   If KCX191 is silently remapped to LYS the run "succeeds" while deleting 5 of the
+#   29 contacting atoms (Mg 2.17, O3 2.71 and 2.98, O2 3.06 and 3.19).
+# Test run B: confirm a bare-number contig with no chain-prefixed range is accepted,
+#   and confirm whether Mg2+ can be declared at all (see notes at the bottom).
+
+contig: "300"
+# Designed length only. It names NO motif residue, so it cannot trip the documented
+# "Errors are raised if indexed and unindexed motifs overlap". 300 is NOT a number from
+# the facts file: the chain-A motif spans 166->394, i.e. 229 residues by the file's own
+# position list, and 300 leaves room for termini and the cis lid. Sweep it.
+# Two-chain variant (if the partner subunit is to be kept as a real second chain):
+#   contig: "260,/0,60"   and move B53,B111 after the break. The file documents /0 for
+#   `contig` ONLY and says nothing about chain breaks in `unindex`, so this is untested.
+
+unindex:
+  - "A166,1,A168"
+  - "A191,1,A193-194"
+  - "A285,1,A287-288,2,A291,29,A321,7,A329"
+  - "A368-370"
+  - "A392-394"
+  - "B53"
+  - "B111"
+# Offsets are INTERVENING-residue counts, checked against all four worked examples in
+# the file: A164,1,A166 (164->166 gap 2), A321,7,A329 ("321->329 is 8"),
+# A368-370,22,A393-394 ("370->393 is 23"), B48,4,B53 ("48->53 is 5").
+# Mine: 166->168 gap 2 -> 1; 191->193 gap 2 -> 1; 285->287 gap 2 -> 1; 288->291 gap 3 -> 2;
+# 291->321 "is 30" -> 29; 321->329 "is 8" -> 7.
+# NOTE: the prose example `A11,3,A12` in the docs section is inconsistent with this
+# (index difference 1 would give 0, not 3). I follow the four worked examples. Verify
+# in the logged internal breakpoints before trusting the run.
+
+ligand: CAP
+
+cleanup_guideposts: False
+
+select_fixed_atoms:
+  A166: "CE,NZ"
+  A168: "CE,NZ"
+  A191: "CX,OQ1,OQ2"
+  A193: "CG,OD1,OD2"
+  A194: "CD,OE1,OE2"
+  A285: "ND1,CE1,NE2"
+  A287: "ND1,CE1,NE2"
+  A288: "NE,CZ,NH2"
+  A291: "ND1,CE1,NE2"
+  A321: "ND1,CE1,NE2"
+  A329: "CE,NZ"
+  A368: "C,O"
+  A369: "N,CA,C"
+  A370: "N,CA"
+  A392: "C"
+  A393: "N,CA,C"
+  A394: "N,CA"
+  B53:  "N,CA,C,O,CB,OG1,CG2"
+  B111: "N,CA,C,O,CB,CG,OD1,ND2"
+
+# Per-residue justification, every number measured from 9I27.cif
+# (RFD3_ATOM_MEASUREMENTS.md). 43 atoms across 17 residues, down from 107.
+# Backbone is fixed ONLY where a backbone atom H-bonds the ligand, or where the
+# residue's C sets the next residue's amide direction. Eleven residues reach the
+# ligand through the side chain alone and get no backbone at all.
+#  A166 CE,NZ            backbone 7.03 A away, no backbone H-bond -> dropped. NZ carries O1 3.16 (1-phosphate), O2 3.14, O6 3.35, the 2.78 salt bridge to D193 OD2 and a 2.84 water. CE aims the ammonium cone.
+#  A168 CE,NZ            backbone 6.73 A. NZ: O6 2.82, 2.83 salt bridge to E194 OE2, water 2.99.
+#  A191 CX,OQ1,OQ2       backbone 7.24 A. OQ1/OQ2 carry Mg 2.17, O3 2.71/2.98, O2 3.06/3.19, plus 2.81 to D193 OD1 and 2.90 to E194 OE1. CX pins the carbamate plane. NZ and the CB-CE stem carry no measured contact.
+#  A193 CG,OD1,OD2       backbone_min 4.31 is CA to Mg, far outside the 2.6 coordination cutoff and listed as no backbone H-bond. OD1 takes Mg 2.09, O6 3.18, O2 3.40; OD2 takes K166 NZ 2.78. CG fixes which oxygen faces the metal.
+#  A194 CD,OE1,OE2       backbone_min 3.96 is N to Mg, again no backbone H-bond. OE1 takes Mg 2.06, O3 2.96, O6 3.24, H287 NE2 3.08; OE2 takes K168 NZ 2.83. CD fixes the plane.
+#  A285 ND1,CE1,NE2      touches the ligand nowhere (side chain 7.59, backbone 10.52). Its whole job is NE2 2.87 to H321 NE2, plus CE1 3.35 to KCX191 CE.
+#  A287 ND1,CE1,NE2      backbone 6.03 A. NE2 makes O3 2.83 and E194 OE1 3.08; ND1 holds a 3.18 water bridge. Both nitrogens are in use.
+#  A288 NE,CZ,NH2        backbone 4.87 A, outside the H-bond cutoff. NE 2.85 to O5P and NH2 3.03 to O4P; NE also makes 3.10 to H291 NE2. CZ fixes the guanidinium plane.
+#  A291 ND1,CE1,NE2      side chain 4.06 A, so no direct ligand contact. Measured role is NE2 3.10 to R288 NE plus a 2.81 water to the 5-phosphate.
+#  A321 ND1,CE1,NE2      backbone 4.67 A, no backbone H-bond. Side chain works three ways at once: ND1 2.89 to O6P, NE2 2.87 to H285, CE1 3.35 to KCX191 OQ1.
+#  A329 CE,NZ            backbone 6.62 A. NZ alone spans two moieties, O2P 2.88 and O7 2.97. No side-chain partner inside the motif and SASA 95.6 - the most exposed residue in the set.
+#  A368 C,O              the only non-Gly backbone contact: O to O6P 3.13. C is also the frame carbon for G369's amide. OG released - its only in-motif line is 3.82 to KCX191 OQ1, outside the H-bond cutoff.
+#  A369 N,CA,C           Gly. N donates 3.42 to O4, the ligand's only contact to that hydroxyl; CA completes the frame against C(368); C frames G370.
+#  A370 N,CA             Gly. N donates the tightest backbone bond in the set, 2.68 to O2P; CA completes the frame against C(369). Nothing needs C(370).
+#  A392 C                contacts nothing at all. Present only so C(392) aims G393's amide. N, CA, O and CB released.
+#  A393 N,CA,C           Gly. N donates 2.83 to O3P; CA completes the frame against C(392); C frames G394.
+#  A394 N,CA             Gly. N donates 2.79 to O1P; CA completes the frame against C(393). No residue 395 in the motif.
+#
+# All four imidazoles use ND1,CE1,NE2. Any three non-collinear ring atoms fix the
+# plane, but CD2,CE1,NE2 subtends only 36 deg at CE1 while ND1,CE1,NE2 subtends 108,
+# so the same three atoms determine the plane far more stably.
+#
+# B53 and B111 belong to the 7-component primary, not to these 6 components, and were
+# not measured here. Their atom lists above are unchanged and unverified.
+
+# ATOM-LIST NOTES (every name is a real atom of that residue type):
+#  A166/A168/A329  Lys   N CA C O CB CG CD CE NZ
+#  A191            KCX   ... NZ CX OQ1 OQ2 - CX is the carbamate carbon that OQ1/OQ2
+#                        hang off; without it the carbamate plane is diffused, which is
+#                        the same argument used for CG on D193 and CD on E194.
+#  A193            Asp   ... CB CG OD1 OD2 - CG included so the carboxylate plane is set.
+#  A194            Glu   ... CB CG CD OE1 OE2 - CD included, same reason.
+#  A285/287/291/321 His  CB CG ND1 CD2 CE1 NE2 - the WHOLE ring every time. H321 commits
+#                        ND1 (5-phosphate 2.89) and NE2 (H285 2.87) in opposite directions,
+#                        so a two-atom fix leaves one of them free.
+#  A288            Arg   CB CG CD NE CZ NH1 NH2 - CZ and NH1 included so the guanidinium
+#                        plane is determined, not just the two contacting nitrogens.
+#  A368            Ser   BKBN only; OG released (its only partner T391 is not in the motif).
+#  A369/370/392/393/394  BKBN. A392 carries no contact - it is present solely so C(392)
+#                        exists and G393's N-H has a defined direction. BKBN is
+#                        residue-type agnostic, so 392's identity does not matter.
+#  B53             Thr   N CA C O CB OG1 CG2 - backbone fixed so this trans-chain residue
+#                        is self-anchored rather than a lone hydroxyl.
+#  B111            Asn   N CA C O CB CG OD1 ND2 - OD1 and CG fixed so the amide cannot flip.
+#
+# select_hbond_donor / select_hbond_acceptor are deliberately NOT used: the file says they
+# are "intended to make the model BUILD such an interaction, not to preserve one".
+# select_unfixed_sequence is deliberately NOT used: the file does not state the default for
+# unindexed residues, and I need G369/G370/G393/G394 to stay Gly. Verify in the output.
+#
+# UNRESOLVED IN THE INPUT: Mg2+. The file documents `ligand` as "ligand by PDB chemical
+# component name (CABP is CAP)" and gives no name for the metal and no second-ligand key.
+# If Mg cannot be declared, the three tightest distances in the site (2.06, 2.09, 2.17)
+# fix three anionic oxygens around an empty point, and component 2's justification becomes
+# "holds the O2/O3 hydroxyl network" rather than "holds the Mg site".
+#
+# POST-RUN CHECKS, in order: 1) KCX191 OQ1/OQ2/CX present in the guidepost output;
+# 2) logged internal breakpoints show 7 components and 19 residues, and the 29/7 offsets
+# were read as intervening counts; 3) every listed atom sits at input coordinates (an
+# unrecognised atom name fails silently under the exclusive-dictionary rule); 4) re-measure
+# the 29 distances; 5) G369/G370/G393/G394 still Gly; 6) the four Gly N-H vectors actually
+# point at the ligand - fixed N positions do not fix N-H direction, and the file gives
+# heavy-atom distances only.

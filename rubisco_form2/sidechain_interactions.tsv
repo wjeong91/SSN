@@ -1,0 +1,47 @@
+interaction	group	n_sites	fraction_present
+H285-H321 H-bond	control_9I27_siteB	1	1.00
+H285-H321 H-bond	pdb_CABP	94	1.00
+H285-H321 H-bond	pdb_noCABP	27	0.63
+H285-H321 H-bond	afdb	57	1.00
+H285-H321 H-bond	esm	12	1.00
+H44(B)-E48(B) salt bridge	control_9I27_siteB	1	1.00
+H44(B)-E48(B) salt bridge	pdb_CABP	94	1.00
+H44(B)-E48(B) salt bridge	pdb_noCABP	27	0.44
+H44(B)-E48(B) salt bridge	afdb	54	0.87
+H44(B)-E48(B) salt bridge	esm	12	0.42
+T391-S368 H-bond	control_9I27_siteB	1	1.00
+T391-S368 H-bond	pdb_CABP	94	0.93
+T391-S368 H-bond	pdb_noCABP	27	0.30
+T391-S368 H-bond	afdb	54	1.00
+T391-S368 H-bond	esm	12	0.00
+H291-R288 H-bond/stacking	control_9I27_siteB	1	1.00
+H291-R288 H-bond/stacking	pdb_CABP	94	1.00
+H291-R288 H-bond/stacking	pdb_noCABP	25	0.84
+H291-R288 H-bond/stacking	afdb	57	1.00
+H291-R288 H-bond/stacking	esm	12	0.08
+N54(B)-T53(B) H-bond	control_9I27_siteB	1	1.00
+N54(B)-T53(B) H-bond	pdb_CABP	94	0.89
+N54(B)-T53(B) H-bond	pdb_noCABP	14	0.14
+N54(B)-T53(B) H-bond	afdb	54	0.31
+N54(B)-T53(B) H-bond	esm	12	0.50
+P195-E194 packing	control_9I27_siteB	1	1.00
+P195-E194 packing	pdb_CABP	94	1.00
+P195-E194 packing	pdb_noCABP	27	1.00
+P195-E194 packing	afdb	57	1.00
+P195-E194 packing	esm	12	1.00
+A289-N111(B) packing	control_9I27_siteB	1	1.00
+A289-N111(B) packing	pdb_CABP	94	1.00
+A289-N111(B) packing	pdb_noCABP	20	0.65
+D263-E194 packing	control_9I27_siteB	1	1.00
+D263-E194 packing	pdb_CABP	93	1.00
+D263-E194 packing	pdb_noCABP	27	0.81
+D263-E194 packing	afdb	57	0.98
+D263-E194 packing	esm	12	1.00
+L261-K191 packing	control_9I27_siteB	1	1.00
+L261-K191 packing	pdb_CABP	82	1.00
+L261-K191 packing	pdb_noCABP	27	0.70
+L261-K191 packing	afdb	57	0.98
+L261-K191 packing	esm	12	1.00
+T106(B)-E194 packing	control_9I27_siteB	1	1.00
+T106(B)-E194 packing	pdb_CABP	94	0.98
+T106(B)-E194 packing	pdb_noCABP	20	0.65
