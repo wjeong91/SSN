@@ -1,0 +1,28 @@
+name: Fetch form II Rubisco structures
+
+on:
+  push:
+    branches: [claude/jolly-gates-9vulnm]
+    paths:
+      - "rubisco_form2/ids/**"
+      - "rubisco_form2/fetch_structures.py"
+      - ".github/workflows/fetch_form2_structures.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download structures
+        run: python3 rubisco_form2/fetch_structures.py
+      - name: Commit structures
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add rubisco_form2/structures
+          git diff --cached --quiet || git commit -m "Add fetched form II Rubisco structures"
+          git push
