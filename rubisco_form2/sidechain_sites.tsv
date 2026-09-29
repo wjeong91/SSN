@@ -1,0 +1,192 @@
+structure	site	source	state
+A0A0D5MEE8	A (monomer)	afdb	model
+A0A0G4GM17	A (monomer)	afdb	model
+A0A1M3GK19	A (monomer)	afdb	model
+A0A1Q9DLW0	A (monomer)	afdb	model
+A0A1Q9E0D6	A (monomer)	afdb	model
+A0A7S1Q8I4	A (monomer)	afdb	model
+A0A7V5C8V4	A (monomer)	afdb	model
+A0A812L1P8	A (monomer)	afdb	model
+A0A812M981	A (monomer)	afdb	model
+A0A812X920	A (monomer)	afdb	model
+A0A813E7F0	A (monomer)	afdb	model
+A0A813ES09	A (monomer)	afdb	model
+A0A813EYD3	A (monomer)	afdb	model
+A0A813G796	A (monomer)	afdb	model
+A0A813GAU1	A (monomer)	afdb	model
+A0A813GD92	A (monomer)	afdb	model
+A0A813HXS9	A (monomer)	afdb	model
+A0A813IDD4	A (monomer)	afdb	model
+A0A813JE47	A (monomer)	afdb	model
+A0A813LB54	A (monomer)	afdb	model
+A0A945GVX4	A (monomer)	afdb	model
+A0A9P1C724	A (monomer)	afdb	model
+A0A9P1C8T4	A (monomer)	afdb	model
+A0AA36IXG3	A (monomer)	afdb	model
+A1VNQ9	A (monomer)	afdb	model
+A3PRW6	A (monomer)	afdb	model
+B3QB68	A (monomer)	afdb	model
+B9KTC8	A (monomer)	afdb	model
+D5AUD5	A (monomer)	afdb	model
+O84917	A (monomer)	afdb	model
+P04718	A (monomer)	afdb	model
+P29278	A (monomer)	afdb	model
+P50922	A (monomer)	afdb	model
+Q07N61	A (monomer)	afdb	model
+Q213J3	A (monomer)	afdb	model
+Q21YM9	A (monomer)	afdb	model
+Q2J1J9	A (monomer)	afdb	model
+Q2RRP5	A (monomer)	afdb	model
+Q2W3S5	A (monomer)	afdb	model
+Q31IK3	A (monomer)	afdb	model
+Q37D32	A (monomer)	afdb	model
+Q3IX55	A (monomer)	afdb	model
+Q41406	A (monomer)	afdb	model
+Q42813	A (monomer)	afdb	model
+Q479W5	A (monomer)	afdb	model
+Q59462	A (monomer)	afdb	model
+Q5ENN5	A (monomer)	afdb	model
+Q60028	A (monomer)	afdb	model
+Q6N0W9	A (monomer)	afdb	model
+Q6Y9B8	A (monomer)	afdb	model
+Q6Y9E5	A (monomer)	afdb	model
+Q6Y9H0	A (monomer)	afdb	model
+Q6Y9H4	A (monomer)	afdb	model
+Q71LZ3	A (monomer)	afdb	model
+Q8RTI2	A (monomer)	afdb	model
+Q9ZHZ4	A (monomer)	afdb	model
+U3NHZ5	A (monomer)	afdb	model
+MGYP000008083038	A (monomer)	esm	model
+MGYP000370765917	A (monomer)	esm	model
+MGYP000391397856	A (monomer)	esm	model
+MGYP000441050396	A (monomer)	esm	model
+MGYP000697636749	A (monomer)	esm	model
+MGYP000908171781	A (monomer)	esm	model
+MGYP001170218668	A (monomer)	esm	model
+MGYP002146133792	A (monomer)	esm	model
+MGYP002713111751	A (monomer)	esm	model
+MGYP003562809595	A (monomer)	esm	model
+MGYP003571940627	A (monomer)	esm	model
+MGYP003707161045	A (monomer)	esm	model
+1RBA	A/B	pdb	apo
+1RBA	B/A	pdb	apo
+1RUS	A/B	pdb	3PG
+1RUS	B/A	pdb	3PG
+2RUS	A/B	pdb	FOR+MG
+2RUS	B/A	pdb	FOR+MG
+4LF1	A/B	pdb	CAP+MG KCX
+4LF1	B/A	pdb	CAP+MG KCX
+4LF1	C/D	pdb	CAP+MG KCX
+4LF1	D/C	pdb	CAP+MG KCX
+4LF1	E/F	pdb	CAP+MG KCX
+4LF1	F/E	pdb	CAP+MG KCX
+4LF2	A/B	pdb	MG KCX
+4LF2	B/A	pdb	MG KCX
+4LF2	C/D	pdb	MG KCX
+4LF2	D/C	pdb	MG KCX
+4LF2	E/F	pdb	apo KCX
+4LF2	F/E	pdb	apo KCX
+5C2C	A (monomer)	pdb	MG KCX
+5C2C	B/C	pdb	MG KCX
+5C2C	C/B	pdb	MG KCX
+5C2G	A/C	pdb	CAP+MG KCX
+5C2G	B/F	pdb	CAP+MG KCX
+5C2G	C/A	pdb	CAP+MG KCX
+5C2G	D/E	pdb	CAP+MG KCX
+5C2G	E/D	pdb	CAP+MG KCX
+5C2G	F/B	pdb	CAP+MG KCX
+5HAN	A/B	pdb	CAP+MG KCX
+5HAN	B/A	pdb	CAP+MG KCX
+5HAN	C/D	pdb	CAP+MG KCX
+5HAN	D/C	pdb	CAP+MG KCX
+5HAN	E/F	pdb	CAP+MG KCX
+5HAN	F/E	pdb	CAP+MG KCX
+5HAN	G/H	pdb	CAP+MG KCX
+5HAN	H/G	pdb	CAP+MG KCX
+5HAN	I/J	pdb	CAP+MG KCX
+5HAN	J/I	pdb	CAP+MG KCX
+5HAN	K/L	pdb	CAP+MG KCX
+5HAN	L/K	pdb	CAP+MG KCX
+5HAO	A/B	pdb	CAP+MG KCX
+5HAO	B/A	pdb	CAP+MG KCX
+5HAO	C/D	pdb	CAP+MG KCX
+5HAO	D/C	pdb	CAP+MG KCX
+5HAO	E/F	pdb	CAP+MG KCX
+5HAO	F/E	pdb	CAP+MG KCX
+5HAT	A/B	pdb	CAP+MG KCX
+5HAT	B/A	pdb	CAP+MG KCX
+5HAT	C/D	pdb	CAP+MG KCX
+5HAT	D/C	pdb	CAP+MG KCX
+5HAT	E/F	pdb	CAP+MG KCX
+5HAT	F/E	pdb	CAP+MG KCX
+5HAT	G/H	pdb	CAP+MG KCX
+5HAT	H/G	pdb	CAP+MG KCX
+5HAT	I/J	pdb	CAP+MG KCX
+5HAT	J/I	pdb	CAP+MG KCX
+5HAT	K/L	pdb	CAP+MG KCX
+5HAT	L/K	pdb	CAP+MG KCX
+5HJX	A/B	pdb	CAP+MG KCX
+5HJX	B/A	pdb	CAP+MG KCX
+5HJX	C/D	pdb	CAP+MG KCX
+5HJX	D/C	pdb	CAP+MG KCX
+5HJX	E/F	pdb	CAP+MG KCX
+5HJX	F/E	pdb	CAP+MG KCX
+5HJY	A/B	pdb	CAP+MG KCX
+5HJY	B/A	pdb	CAP+MG KCX
+5HJY	C/D	pdb	CAP+MG KCX
+5HJY	D/C	pdb	CAP+MG KCX
+5HJY	E/F	pdb	CAP+MG KCX
+5HJY	F/E	pdb	CAP+MG KCX
+5HK4	A/B	pdb	CAP+MG KCX
+5HK4	B/A	pdb	CAP+MG KCX
+5HK4	C/D	pdb	CAP+MG KCX
+5HK4	D/C	pdb	CAP+MG KCX
+5HK4	E/F	pdb	CAP+MG KCX
+5HK4	F/E	pdb	CAP+MG KCX
+5HQL	A/B	pdb	CAP+MG KCX
+5HQL	B/A	pdb	CAP+MG KCX
+5HQL	C/E	pdb	CAP+MG KCX
+5HQL	D/F	pdb	CAP+MG KCX
+5HQL	E/C	pdb	CAP+MG KCX
+5HQL	F/D	pdb	CAP+MG KCX
+5HQM	A/B	pdb	CAP+MG KCX
+5HQM	B/A	pdb	CAP+MG KCX
+5KOZ	A/B	pdb	CAP+CO3+MG
+5KOZ	B/A	pdb	CAP+CO3+MG
+5KOZ	C/D	pdb	CAP+CO3+MG
+5KOZ	D/C	pdb	CAP+CO3+MG
+5KOZ	E/F	pdb	CAP+CO3+MG
+5KOZ	F/E	pdb	CAP+CO3+MG
+5KOZ	G/H	pdb	CAP+CO3+MG
+5KOZ	H/G	pdb	CAP+CO3+MG
+5KOZ	I/J	pdb	CAP+CO3+MG
+5KOZ	J/I	pdb	CAP+CO3+MG
+5KOZ	K/L	pdb	CAP+CO3+MG
+5KOZ	L/K	pdb	CAP+CO3+MG
+5RUB	A/B	pdb	apo
+5RUB	B/A	pdb	apo
+6IUS	A/C	pdb	apo
+6IUS	B (monomer)	pdb	apo
+6IUS	C/A	pdb	apo
+7T1C	A (monomer)	pdb	apo
+7T1J	A/B	pdb	CAP+MG KCX
+7T1J	B/A	pdb	CAP+MG KCX
+7T1J	C/D	pdb	CAP+MG KCX
+7T1J	D/C	pdb	CAP+MG KCX
+7T1J	E/F	pdb	CAP+MG KCX
+7T1J	F/E	pdb	CAP+MG KCX
+7T1J	G/H	pdb	CAP+MG KCX
+7T1J	H/G	pdb	CAP+MG KCX
+7T1J	I/J	pdb	CAP+MG KCX
+7T1J	J/I	pdb	CAP+MG KCX
+7T1J	K/L	pdb	CAP+MG KCX
+7T1J	L/K	pdb	CAP+MG KCX
+7VWX	a (monomer)	pdb	apo
+8BAA	Z (monomer)	pdb	apo
+9I26	A (monomer)	pdb	apo
+9I26	B (monomer)	pdb	apo
+9I27	B/A	pdb	CAP+MG KCX
+9I28	A/B	pdb	CAP+MG KCX
+9I28	B/A	pdb	CAP+MG KCX
+9RUB	A/B	pdb	FMT+MG+RUB
+9RUB	B/A	pdb	FMT+MG+RUB
