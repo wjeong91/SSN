@@ -42,25 +42,55 @@ ligand: CAP
 cleanup_guideposts: False
 
 select_fixed_atoms:
-  A166: "N,CA,C,O,CB,CG,CD,CE,NZ"
-  A168: "CB,CG,CD,CE,NZ"
-  A191: "N,CA,C,O,CB,CG,CD,CE,NZ,CX,OQ1,OQ2"
-  A193: "N,CA,C,O,CB,CG,OD1,OD2"
-  A194: "N,CA,C,O,CB,CG,CD,OE1,OE2"
-  A285: "CB,CG,ND1,CD2,CE1,NE2"
-  A287: "N,CA,C,O,CB,CG,ND1,CD2,CE1,NE2"
-  A288: "CB,CG,CD,NE,CZ,NH1,NH2"
-  A291: "CB,CG,ND1,CD2,CE1,NE2"
-  A321: "CB,CG,ND1,CD2,CE1,NE2"
-  A329: "CB,CG,CD,CE,NZ"
-  A368: "N,CA,C,O"
-  A369: "N,CA,C,O"
-  A370: "N,CA,C,O"
-  A392: "N,CA,C,O"
-  A393: "N,CA,C,O"
-  A394: "N,CA,C,O"
+  A166: "CE,NZ"
+  A168: "CE,NZ"
+  A191: "CX,OQ1,OQ2"
+  A193: "CG,OD1,OD2"
+  A194: "CD,OE1,OE2"
+  A285: "ND1,CE1,NE2"
+  A287: "ND1,CE1,NE2"
+  A288: "NE,CZ,NH2"
+  A291: "ND1,CE1,NE2"
+  A321: "ND1,CE1,NE2"
+  A329: "CE,NZ"
+  A368: "C,O"
+  A369: "N,CA,C"
+  A370: "N,CA"
+  A392: "C"
+  A393: "N,CA,C"
+  A394: "N,CA"
   B53:  "N,CA,C,O,CB,OG1,CG2"
   B111: "N,CA,C,O,CB,CG,OD1,ND2"
+
+# Per-residue justification, every number measured from 9I27.cif
+# (RFD3_ATOM_MEASUREMENTS.md). 43 atoms across 17 residues, down from 107.
+# Backbone is fixed ONLY where a backbone atom H-bonds the ligand, or where the
+# residue's C sets the next residue's amide direction. Eleven residues reach the
+# ligand through the side chain alone and get no backbone at all.
+#  A166 CE,NZ            backbone 7.03 A away, no backbone H-bond -> dropped. NZ carries O1 3.16 (1-phosphate), O2 3.14, O6 3.35, the 2.78 salt bridge to D193 OD2 and a 2.84 water. CE aims the ammonium cone.
+#  A168 CE,NZ            backbone 6.73 A. NZ: O6 2.82, 2.83 salt bridge to E194 OE2, water 2.99.
+#  A191 CX,OQ1,OQ2       backbone 7.24 A. OQ1/OQ2 carry Mg 2.17, O3 2.71/2.98, O2 3.06/3.19, plus 2.81 to D193 OD1 and 2.90 to E194 OE1. CX pins the carbamate plane. NZ and the CB-CE stem carry no measured contact.
+#  A193 CG,OD1,OD2       backbone_min 4.31 is CA to Mg, far outside the 2.6 coordination cutoff and listed as no backbone H-bond. OD1 takes Mg 2.09, O6 3.18, O2 3.40; OD2 takes K166 NZ 2.78. CG fixes which oxygen faces the metal.
+#  A194 CD,OE1,OE2       backbone_min 3.96 is N to Mg, again no backbone H-bond. OE1 takes Mg 2.06, O3 2.96, O6 3.24, H287 NE2 3.08; OE2 takes K168 NZ 2.83. CD fixes the plane.
+#  A285 ND1,CE1,NE2      touches the ligand nowhere (side chain 7.59, backbone 10.52). Its whole job is NE2 2.87 to H321 NE2, plus CE1 3.35 to KCX191 CE.
+#  A287 ND1,CE1,NE2      backbone 6.03 A. NE2 makes O3 2.83 and E194 OE1 3.08; ND1 holds a 3.18 water bridge. Both nitrogens are in use.
+#  A288 NE,CZ,NH2        backbone 4.87 A, outside the H-bond cutoff. NE 2.85 to O5P and NH2 3.03 to O4P; NE also makes 3.10 to H291 NE2. CZ fixes the guanidinium plane.
+#  A291 ND1,CE1,NE2      side chain 4.06 A, so no direct ligand contact. Measured role is NE2 3.10 to R288 NE plus a 2.81 water to the 5-phosphate.
+#  A321 ND1,CE1,NE2      backbone 4.67 A, no backbone H-bond. Side chain works three ways at once: ND1 2.89 to O6P, NE2 2.87 to H285, CE1 3.35 to KCX191 OQ1.
+#  A329 CE,NZ            backbone 6.62 A. NZ alone spans two moieties, O2P 2.88 and O7 2.97. No side-chain partner inside the motif and SASA 95.6 - the most exposed residue in the set.
+#  A368 C,O              the only non-Gly backbone contact: O to O6P 3.13. C is also the frame carbon for G369's amide. OG released - its only in-motif line is 3.82 to KCX191 OQ1, outside the H-bond cutoff.
+#  A369 N,CA,C           Gly. N donates 3.42 to O4, the ligand's only contact to that hydroxyl; CA completes the frame against C(368); C frames G370.
+#  A370 N,CA             Gly. N donates the tightest backbone bond in the set, 2.68 to O2P; CA completes the frame against C(369). Nothing needs C(370).
+#  A392 C                contacts nothing at all. Present only so C(392) aims G393's amide. N, CA, O and CB released.
+#  A393 N,CA,C           Gly. N donates 2.83 to O3P; CA completes the frame against C(392); C frames G394.
+#  A394 N,CA             Gly. N donates 2.79 to O1P; CA completes the frame against C(393). No residue 395 in the motif.
+#
+# All four imidazoles use ND1,CE1,NE2. Any three non-collinear ring atoms fix the
+# plane, but CD2,CE1,NE2 subtends only 36 deg at CE1 while ND1,CE1,NE2 subtends 108,
+# so the same three atoms determine the plane far more stably.
+#
+# B53 and B111 belong to the 7-component primary, not to these 6 components, and were
+# not measured here. Their atom lists above are unchanged and unverified.
 
 # ATOM-LIST NOTES (every name is a real atom of that residue type):
 #  A166/A168/A329  Lys   N CA C O CB CG CD CE NZ
