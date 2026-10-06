@@ -1,0 +1,4 @@
+== cross-structure check
+bind_core vs bind_c40: 146 shared atoms, max deviation 0.000 A, bind_core subset of bind_c40; only-in-bind_core: []; only-in-bind_c40: [('A', 164), ('A', 330), ('A', 392), ('B', 48)]
+bind_core vs bind_c45: 146 shared atoms, max deviation 0.000 A, bind_core subset of bind_c45; only-in-bind_core: []; only-in-bind_c45: [('A', 164), ('A', 291), ('A', 323), ('A', 330), ('A', 391), ('A', 392), ('B', 48), ('B', 54)]
+bind_c40 vs bind_c45: 176 shared atoms, max deviation 0.000 A, bind_c40 subset of bind_c45; only-in-bind_c40: []; only-in-bind_c45: [('A', 291), ('A', 323), ('A', 391), ('B', 54)]

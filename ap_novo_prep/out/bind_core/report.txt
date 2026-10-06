@@ -1,0 +1,20 @@
+== bind_core
+protein chain A: 14 residues: LYS166 LYS168 LYS191 ASP193 GLU194 HIS287 ARG288 HIS321 LYS329 SER368 GLY369 GLY370 GLY393 GLY394
+protein chain B: 2 residues: THR53 ASN111
+ligand chain C: CAP (from A501), 21 atoms
+ligand chain D: MG (from A500), 1 atoms
+ligand chain E: FMT (from A191), 3 atoms
+motif tokens = 16 residues + 25 ligand atoms = 41 (README cap for unindexed: 128, per earlier note)
+design tokens ~ length 360 + 25 ligand atoms = 385 (training crop 512, per earlier note)
+residue atom sets: all complete
+CAP atom names (21): C C1 C2 C3 C4 C5 O1 O1P O2 O2P O3 O3P O4 O4P O5 O5P O6 O6P O7 P1 P2
+  NOT verified against the CCD (RCSB unreachable from this container)
+Mg O/N contacts <= 2.6 A: 6
+  2.03  A501 CAP O6
+  2.06  A194 GLU OE1
+  2.09  A193 ASP OD1
+  2.14  A501 CAP O2
+  2.16  A501 CAP O3
+  2.17  A191 KCX OQ2
+note: A191 KCX -> LYS + FMT(chain E); NZ-CX bond 1.34 A is not encoded
+indexed: skipped (no --numbering-map)

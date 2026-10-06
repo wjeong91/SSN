@@ -1,0 +1,175 @@
+{
+  "source": "bind_c40.pdb",
+  "protein_residues": [
+    {
+      "id": "A164",
+      "resname": "ILE",
+      "orig_resname": "ILE",
+      "n_atoms": 8
+    },
+    {
+      "id": "A166",
+      "resname": "LYS",
+      "orig_resname": "LYS",
+      "n_atoms": 9
+    },
+    {
+      "id": "A168",
+      "resname": "LYS",
+      "orig_resname": "LYS",
+      "n_atoms": 9
+    },
+    {
+      "id": "A191",
+      "resname": "LYS",
+      "orig_resname": "KCX",
+      "n_atoms": 9
+    },
+    {
+      "id": "A193",
+      "resname": "ASP",
+      "orig_resname": "ASP",
+      "n_atoms": 8
+    },
+    {
+      "id": "A194",
+      "resname": "GLU",
+      "orig_resname": "GLU",
+      "n_atoms": 9
+    },
+    {
+      "id": "A287",
+      "resname": "HIS",
+      "orig_resname": "HIS",
+      "n_atoms": 10
+    },
+    {
+      "id": "A288",
+      "resname": "ARG",
+      "orig_resname": "ARG",
+      "n_atoms": 11
+    },
+    {
+      "id": "A321",
+      "resname": "HIS",
+      "orig_resname": "HIS",
+      "n_atoms": 10
+    },
+    {
+      "id": "A329",
+      "resname": "LYS",
+      "orig_resname": "LYS",
+      "n_atoms": 9
+    },
+    {
+      "id": "A330",
+      "resname": "MET",
+      "orig_resname": "MET",
+      "n_atoms": 8
+    },
+    {
+      "id": "A368",
+      "resname": "SER",
+      "orig_resname": "SER",
+      "n_atoms": 6
+    },
+    {
+      "id": "A369",
+      "resname": "GLY",
+      "orig_resname": "GLY",
+      "n_atoms": 4
+    },
+    {
+      "id": "A370",
+      "resname": "GLY",
+      "orig_resname": "GLY",
+      "n_atoms": 4
+    },
+    {
+      "id": "A392",
+      "resname": "ALA",
+      "orig_resname": "ALA",
+      "n_atoms": 5
+    },
+    {
+      "id": "A393",
+      "resname": "GLY",
+      "orig_resname": "GLY",
+      "n_atoms": 4
+    },
+    {
+      "id": "A394",
+      "resname": "GLY",
+      "orig_resname": "GLY",
+      "n_atoms": 4
+    },
+    {
+      "id": "B48",
+      "resname": "GLU",
+      "orig_resname": "GLU",
+      "n_atoms": 9
+    },
+    {
+      "id": "B53",
+      "resname": "THR",
+      "orig_resname": "THR",
+      "n_atoms": 7
+    },
+    {
+      "id": "B111",
+      "resname": "ASN",
+      "orig_resname": "ASN",
+      "n_atoms": 8
+    }
+  ],
+  "ligands": [
+    {
+      "chain": "C",
+      "resname": "CAP",
+      "from": "A501",
+      "n_atoms": 21
+    },
+    {
+      "chain": "D",
+      "resname": "MG",
+      "from": "A500",
+      "n_atoms": 1
+    },
+    {
+      "chain": "E",
+      "resname": "FMT",
+      "from": "A191",
+      "n_atoms": 3
+    }
+  ],
+  "n_motif_tokens": 45,
+  "unverified_fragments_from_earlier_readme_reading": {
+    "unindexed": {
+      "motif_str": "360/C1/D1/E1",
+      "seq_length": "360",
+      "unindexed_motif_residues": [
+        "A164",
+        "A166",
+        "A168",
+        "A191",
+        "A193",
+        "A194",
+        "A287",
+        "A288",
+        "A321",
+        "A329",
+        "A330",
+        "A368",
+        "A369",
+        "A370",
+        "A392",
+        "A393",
+        "A394",
+        "B48",
+        "B53",
+        "B111"
+      ]
+    },
+    "indexed": null
+  }
+}
